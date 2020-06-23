@@ -1,6 +1,8 @@
 # Cultural Selection & Biased Transformation models
 
-Individual-based models of cultural selection and biased transformation in cultural evolution, created in R. See Mesoudi (submitted) for details.
+Individual-based models of cultural selection and biased transformation in cultural evolution, created in R. 
+
+See Mesoudi (submitted) for details.
 
 model1.R contains R code for Model 1 in which cultural selection (in the form of payoff-biased social learning) and biased transformation both favour high values of a continuous cultural trait.
 
