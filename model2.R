@@ -12,6 +12,8 @@ library(RColorBrewer)
 # m <- 0.1  # migration or inter-group contact rate
 # t_max <- 100  # maximum time steps
 
+# define model 2 function (run it below)--------------------------
+
 philtrans_model2 <- function (n, g, Beta, s, Sigma, d, m, t_max) {
   
   # create a matrix with t_max rows and n*g columns (one per agent), filled with NAs, then convert to data.frame
@@ -156,7 +158,7 @@ philtrans_model2 <- function (n, g, Beta, s, Sigma, d, m, t_max) {
   list(output = output, Fst = Fst)  # export from function
 }
   
-# run model here---------------------------------------------
+# run model 2 here---------------------------------------------
 
 m2 <- philtrans_model2(n = 10, g = 3, Beta = 0, s = 1, Sigma = 1, d = 0.5, m = 0, t_max = 100)
 View(m2$output)
@@ -229,6 +231,7 @@ visual <- function (n, g, Beta, s, Sigma, d, m, t_max) {
 }
 
 # create visualisation here-----------------------------
+
 visual(n = 5, g = 3, Beta = 2, s = 0.9, Sigma = 1, d = 0.5, m = 0, t_max = 200)
 
 # create fig 4 -------------------------------------
@@ -237,7 +240,7 @@ visual(n = 5, g = 3, Beta = 2, s = 0.9, Sigma = 1, d = 0.5, m = 0, t_max = 200)
 
 png("fig4.png", width = 30, height = 20, units = 'cm', res = 600)
 
-par(mfrow=c(2,2)) # 2 rows, 2 columns
+par(mfrow=c(3,1)) # 3 rows, 1 columns
 
 visual(n = 5, g = 3, Beta = 2, s = 0, Sigma = 1, d = 0.5, m = 0, t_max = 50) # top left, convergence on X via BT
 visual(n = 5, g = 3, Beta = 0, s = 0.5, Sigma = 1, d = 0.5, m = 0, t_max = 50) # top right, divergence via CS
